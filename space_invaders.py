@@ -1,8 +1,4 @@
-#Space Invaders
-#python 2.7.12 on Mac
-# Thanks to Christian Thompson
-# Python Game Programming Tutorial: Space Invaders
-# http://christianthompson.com/
+
 
 import turtle
 import os
