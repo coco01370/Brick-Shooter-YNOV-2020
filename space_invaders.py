@@ -1,5 +1,3 @@
-
-
 import turtle
 import os
 import math
@@ -69,7 +67,15 @@ for i in range(number_of_enemies):
 
 for enemy in enemiesList:
   enemy.color("#FFFFFF")
-  enemy.shape("square")
+  randi = random.randint(1,10)
+  if(randi >= 1 and randi < 8):
+    enemy.shape("square")#normal block neutral
+  if(randi == 8):
+    enemy.shape("turtle")#decline bullet's speed
+  if(randi == 9):
+    enemy.shape("circle")#decline player movement speed
+  if(randi == 10):
+    enemy.shape("triangle")#increase enemy movement speed
   enemy.speed(0)
   enemy.penup()
   x = random.randint(-200, 200)
@@ -88,7 +94,7 @@ bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
 bullet.hideturtle()
 
-bulletspeed = 20
+bulletspeed = 30
 
 #Define bullet state
 #we have 2 states:
@@ -96,10 +102,6 @@ bulletspeed = 20
 #fire - bullet is firing
 
 bulletstate = "ready"
-
-
-
-
 
 #Move the player left and right
 
@@ -173,6 +175,19 @@ while gameover == False:
     #Check for collision between bullet and enemy
     if isCollision(bullet, enemy):
       #Reset the bullet
+      test = enemy.shape()
+      if(test == "turtle"):
+          print("#decline bullet's speed ")
+          if(bulletspeed > 10):
+              bulletspeed -= 1
+      if(test == "circle"):
+          print("#decline player movement speed")
+          if(playerspeed > 5):
+            playerspeed -= 0.1
+      if(test == "triangle"):
+          print("#increase enemy movement speed")
+          enemyspeed += 0.1
+
       bullet.hideturtle()
       bulletstate = "ready"
       bullet.setposition(0, -400)
@@ -187,7 +202,7 @@ while gameover == False:
       score_pen.write(scorestring, False, align="right", font = ("Arial", 14, "bold"))
 
     #Check for collision between enemy and player
-    if isCollision(player, enemy):
+    if isCollision(player, enemy) :
       player.hideturtle()
       enemy.hideturtle()
       print("GAME OVER")
@@ -204,10 +219,3 @@ while gameover == False:
   if bullet.ycor() > 275:
     bullet.hideturtle()
     bulletstate = "ready"
-
-
-
-
-
-
-#delay = raw_input("Press enter to finish")
