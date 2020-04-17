@@ -1,17 +1,9 @@
-
 # On importe Tkinter
 from tkinter import *
-#from tkinter import TK ,Canvas
+
 
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
-
-#canvas=Canvas(fenetre, width=768, height=576, bg="ivory")
-
-#bg=PhotoImage(file="noir.png")
-#background=canvas.create_image(370,250,image=bg)
-
-#canvas.pack()
 
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
@@ -20,6 +12,18 @@ champ_label = Label(fenetre, text="Projet B1 Brick Shooter !")
 
 # On affiche le label dans la fenêtre
 champ_label.pack()
+
+
+#Apparition de l'image en fond 
+canvas=Canvas(fenetre)
+canvas.pack()
+
+photo=PhotoImage(file="noir.png")
+canvas.create_image(370, 250, image=photo)
+
+
+
+
 
 bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
 bouton_quitter.pack(side="bottom")
