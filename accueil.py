@@ -13,7 +13,6 @@ champ_label = Label(fenetre, text="Projet B1 Brick Shooter !")
 # On affiche le label dans la fenêtre
 champ_label.pack()
 
-
 #Apparition de l'image en fond
 canvas=Canvas(fenetre)
 canvas.pack()
