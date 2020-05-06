@@ -25,7 +25,7 @@ photo=PhotoImage(file="espace.png")
 canvas.create_image(290, 280, image=photo)
 
 #On affiche les crédits
-txt = canvas.create_text(750, 20, text="Crédit(s) :" + str(RandumCredit), font="Arial 11 italic", fill="#FFD700")
+texte = canvas.create_text(750, 20, text="Crédit(s) :" + str(RandumCredit), font="Arial 11 italic", fill="#FFD700")
 
 #Fonction pour les boutons
 bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
