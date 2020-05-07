@@ -5,6 +5,20 @@ import subprocess
 
 RandumCredit = randint(0, 10)
 
+def instruction():
+    #On affiche les lignes d'instructions
+    texte1 = canvas.create_text(47, 235, text="Règles :", font="Arial 11 italic", fill="white")
+    texte2 = canvas.create_text(274, 260, text="Casser les blocs qui apparaissent sur l'écran de jeu grâce au vaisseau.", font="Arial 11 italic", fill="white")
+    texte3 = canvas.create_text(266, 285, text="Si vous casser un carré, aucun bonus/malus influera sur votre partie.", font="Arial 11 italic", fill="white")
+    texte4 = canvas.create_text(224, 310, text="Si vous casser une tortue, la vitesse de tir sera diminue.", font="Arial 11 italic", fill="white")
+    texte5 = canvas.create_text(283, 335, text="Si vous casser un rond, la vitesse de déplacement du joueur sera diminue.", font="Arial 11 italic", fill="white")
+    texte5 = canvas.create_text(309, 360, text="Si vous casser un triangle, la vitesse de déplacement de l'ennemi sera augmentée.", font="Arial 11 italic", fill="white")
+
+    #Fonction pour les boutons
+    bouton_retour = Button(fenetre, text="Retourner à l'accueil")
+    bouton_retour.pack(side="bottom", padx=5, pady=5)
+    bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
 

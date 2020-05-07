@@ -2,8 +2,6 @@
 from tkinter import *
 from random import randint
 import subprocess
-randumCredit = randint(0, 10)
-
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
 
