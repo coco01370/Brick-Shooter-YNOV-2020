@@ -172,6 +172,10 @@ while gameover == False:
           y = y - 40
           enemy.sety(y)
 
+    if enemy.ycor() < -300:
+     for enemy in enemiesList:
+         gameover = True
+
     #Check for collision between bullet and enemy
     if isCollision(bullet, enemy):
       #Reset the bullet
