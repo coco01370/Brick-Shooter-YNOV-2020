@@ -1,8 +1,9 @@
 # On importe Tkinter
 from tkinter import *
 from random import randint
+import subprocess
 
-RandumCredit = randint(0, 10) 
+RandumCredit = randint(0, 10)
 
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
@@ -27,14 +28,26 @@ canvas.create_image(290, 280, image=photo)
 #On affiche les crédits
 texte = canvas.create_text(750, 20, text="Crédit(s) :" + str(RandumCredit), font="Arial 11 italic", fill="#FFD700")
 
+def launch():
+    fenetre.destroy()
+    subprocess.run('python space_invaders.py')
+
+def instruction():
+        fenetre.destroy()
+        subprocess.run('python instruction.py')
+
+def Personnaliser():
+    fenetre.destroy()
+    subprocess.run('python personnalisation.py')
+
 #Fonction pour les boutons
 bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
 bouton_quitter.pack(side="right", padx=5, pady=5)
-bouton_instruction = Button(fenetre, text="Instruction")
+bouton_instruction = Button(fenetre, text="Instruction", command=instruction)
 bouton_instruction.pack(side="right", padx=5, pady=5)
-bouton_jouer = Button(fenetre, text="Jouer")
+bouton_jouer = Button(fenetre, text="Jouer", command=launch) #lancer le file space_invaders.py
 bouton_jouer.pack(side="left", padx=5, pady=5)
-bouton_personnaliser = Button(fenetre, text="Personnaliser")
+bouton_personnaliser = Button(fenetre, text="Personnaliser", command=Personnaliser)
 bouton_personnaliser.pack(side="left", padx=5, pady=5)
 bouton_jouer.configure(width=20, height=2, bg="#0F056b", fg="white")
 bouton_personnaliser.configure(width=20, height=2, bg="#0F056b", fg="white")

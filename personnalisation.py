@@ -1,11 +1,18 @@
 # On importe Tkinter
 from tkinter import *
 from random import randint
+import subprocess
 
 randumCredit = randint(0, 10)
 
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
+
+
+
+def menus():
+    fenetre.destroy()
+    subprocess.run('python accueil.py')
 
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
@@ -25,7 +32,7 @@ photo=PhotoImage(file="espace.png")
 canvas.create_image(290, 280, image=photo)
 
 #Fonction pour les boutons
-bouton_retour = Button(fenetre, text="Retourner à l'accueil")
+bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
 bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
 

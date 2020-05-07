@@ -1,11 +1,16 @@
 # On importe Tkinter
 from tkinter import *
 from random import randint
-
+import subprocess
 randumCredit = randint(0, 10)
 
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
+
+
+def menus():
+    fenetre.destroy()
+    subprocess.run('python accueil.py')
 
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
@@ -33,7 +38,7 @@ texte5 = canvas.create_text(283, 335, text="Si vous casser un rond, la vitesse d
 texte5 = canvas.create_text(309, 360, text="Si vous casser un triangle, la vitesse de déplacement de l'ennemi sera augmentée.", font="Arial 11 italic", fill="white")
 
 #Fonction pour les boutons
-bouton_retour = Button(fenetre, text="Retourner à l'accueil")
+bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
 bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
 
