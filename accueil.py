@@ -5,7 +5,7 @@ import subprocess
 
 RandumCredit = randint(0, 10)
 
-def instruction():
+def instruction(): 
     #On affiche les lignes d'instructions
     texte1 = canvas.create_text(47, 235, text="Règles :", font="Arial 11 italic", fill="white")
     texte2 = canvas.create_text(274, 260, text="Casser les blocs qui apparaissent sur l'écran de jeu grâce au vaisseau.", font="Arial 11 italic", fill="white")
