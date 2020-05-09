@@ -10,10 +10,6 @@ fenetre = Tk()
 
 
 
-def menus():
-    fenetre.destroy()
-    subprocess.run('python accueil.py')
-
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
 # interface racine
@@ -26,15 +22,72 @@ fenetre.configure(background="#0F056b")
 
 #Apparition de l'image en fond
 canvas=Canvas(fenetre, width=800, heigh=600)
+
 canvas.pack()
 
 photo=PhotoImage(file="espace.png")
 canvas.create_image(290, 280, image=photo)
 
+#Image pour le premier choix de vaisseau
+vaisseau1=PhotoImage(file="vaisseau_ship1.png")
+canvas.create_image(205, 280, image=vaisseau1)
+vaisseau1.configure(width=270, height=200)
+
+#Image pour le deuxième choix de vaisseau
+vaisseau2=PhotoImage(file="vaisseau_ship2.png")
+canvas.create_image(435, 280, image=vaisseau2)
+vaisseau2.configure(width=270, height=200)
+
+#Image pour le troisième choix de vaisseau
+vaisseau3=PhotoImage(file="vaisseau_ship3.png")
+canvas.create_image(750, 290, image=vaisseau3)
+vaisseau3.configure(width=370, height=200)
+
 #Fonction pour les boutons
+choix_ship = 0
+
+def ship1():
+    choix_ship = 1
+
+def ship2():
+    choix_ship = 2
+
+def ship3():
+    choix_ship = 3
+
+def menus():
+    fenetre.destroy()
+    subprocess.run('python accueil.py')
+
+
+#Fonction pour les boutons
+bouton_ship1 = Button(fenetre, text="Ship1", command=ship1)
+bouton_ship1.pack(side="left", padx=5, pady=5)
+bouton_ship1.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+#
+bouton_ship2 = Button(fenetre, text="Ship2", command=ship2)
+bouton_ship2.pack(side="left", padx=5, pady=5)
+bouton_ship2.configure(width=20, height=2, bg="#0F056b", fg="white")
+#
+bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
+bouton_quitter.pack(side="right", padx=5, pady=5)
+bouton_quitter.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+#
+bouton_ship3 = Button(fenetre, text="ship3", command=ship3)
+bouton_ship3.pack(side="left", padx=5, pady=5)
+bouton_ship3.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+#
 bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
 bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+
+
+if choix_ship == 1 :
+    ship_player = "ship1.gif"
+elif choix_ship == 2 :
+    ship_player = "ship2.gif"
+elif choix_ship == 3 :
+    ship_player = "ship3.gif"
 
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)
