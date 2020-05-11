@@ -5,7 +5,7 @@ import subprocess
 
 RandumCredit = randint(0, 10)
 
-def instruction(): 
+def instruction():
     #On affiche les lignes d'instructions
     texte1 = canvas.create_text(47, 235, text="Règles :", font="Arial 11 italic", fill="white")
     texte2 = canvas.create_text(274, 260, text="Casser les blocs qui apparaissent sur l'écran de jeu grâce au vaisseau.", font="Arial 11 italic", fill="white")
@@ -57,16 +57,21 @@ def Personnaliser():
 #Fonction pour les boutons
 bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
 bouton_quitter.pack(side="right", padx=5, pady=5)
+bouton_quitter.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+#
 bouton_instruction = Button(fenetre, text="Instruction", command=instruction)
 bouton_instruction.pack(side="right", padx=5, pady=5)
+bouton_instruction.configure(width=20, height=2, bg="#0F056b", fg="white")
+#
 bouton_jouer = Button(fenetre, text="Jouer", command=launch) #lancer le file space_invaders.py
 bouton_jouer.pack(side="left", padx=5, pady=5)
+bouton_jouer.configure(width=20, height=2, bg="#0F056b", fg="white")
+#
 bouton_personnaliser = Button(fenetre, text="Personnaliser", command=Personnaliser)
 bouton_personnaliser.pack(side="left", padx=5, pady=5)
-bouton_jouer.configure(width=20, height=2, bg="#0F056b", fg="white")
 bouton_personnaliser.configure(width=20, height=2, bg="#0F056b", fg="white")
-bouton_instruction.configure(width=20, height=2, bg="#0F056b", fg="white")
-bouton_quitter.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+
+
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)
 

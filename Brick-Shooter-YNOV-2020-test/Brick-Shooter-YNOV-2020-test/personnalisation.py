@@ -22,26 +22,13 @@ fenetre.configure(background="#0F056b")
 
 #Apparition de l'image en fond
 canvas=Canvas(fenetre, width=800, heigh=600)
+
 canvas.pack()
+
 photo=PhotoImage(file="espace.png")
 canvas.create_image(290, 280, image=photo)
 
-#Image pour le premier choix de vaisseau
-vaisseau1 = Canvas(fenetre, background="black")
-vaisseau1.pack()
-
-
-#Image pour le deuxième choix de vaisseau
-vaisseau2=PhotoImage(file="vaisseau_ship2.png")
-canvas.create_image(435, 280, image=vaisseau2)
-vaisseau2.configure(width=270, height=200)
-
-
-#Image pour le troisième choix de vaisseau
-vaisseau3=PhotoImage(file="vaisseau_ship3.png")
-canvas.create_image(750, 290, image=vaisseau3)
-vaisseau3.configure(width=370, height=200)
-
+#On affiche les lignes d'instructions
 
 
 #Fonction pour les boutons
@@ -49,40 +36,16 @@ choix_ship = 0
 
 def ship1():
     choix_ship = 1
-    show()
-    hide1()
 
 def ship2():
     choix_ship = 2
-    show()
-    hide2()
-    
+
 def ship3():
     choix_ship = 3
-    show()
-    hide3()
 
 def menus():
     fenetre.destroy()
     subprocess.run('python accueil.py')
-
-#function show & hide
-def show():
-    vaisseau1.pack()
-    vaisseau2.pack()
-    vaisseau3.pack()
-
-def hide1():
-    vaisseau2.pack_forget()
-    vaisseau3.pack_forget()
-
-def hide2():
-    vaisseau1.pack_forget()
-    vaisseau3.pack_forget()
-
-def hide3():
-    vaisseau1.pack_forget()
-    vaisseau2.pack_forget()
 
 
 #Fonction pour les boutons

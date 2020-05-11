@@ -2,7 +2,6 @@ import turtle
 import os
 import math
 import random
-
 #Set up the screen
 
 win = turtle.Screen()
@@ -13,7 +12,7 @@ win.bgcolor("#211F1F")
 
 #Register the graphics for the game
 #turtle.register_shape("turtle")
-turtle.register_shape("player.gif")
+turtle.register_shape(ship_player)
 
 #Draw border
 border_pen = turtle.Turtle()
@@ -44,7 +43,7 @@ score_pen.hideturtle()
 #Create the player turtle
 player = turtle.Turtle()
 player.color("blue")
-player.shape("player.gif")
+player.shape(ship_player)
 player.speed(0)
 player.penup()
 player.setposition(0, -250)
@@ -171,10 +170,6 @@ while gameover == False:
           y = enemy.ycor()
           y = y - 40
           enemy.sety(y)
-
-    if enemy.ycor() < -300:
-     for enemy in enemiesList:
-         gameover = True
 
     #Check for collision between bullet and enemy
     if isCollision(bullet, enemy):
