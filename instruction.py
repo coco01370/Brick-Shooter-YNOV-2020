@@ -24,7 +24,7 @@ fenetre.configure(background="#0F056b")
 canvas=Canvas(fenetre, width=800, heigh=600)
 canvas.pack()
 
-photo=PhotoImage(file="espace.png")
+photo=PhotoImage(file="images/espace.png")
 canvas.create_image(290, 280, image=photo)
 
 #On affiche les lignes d'instructions

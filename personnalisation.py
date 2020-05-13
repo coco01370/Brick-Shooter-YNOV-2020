@@ -25,21 +25,21 @@ canvas=Canvas(fenetre, width=800, heigh=600)
 
 canvas.pack()
 
-photo=PhotoImage(file="espace.png")
+photo=PhotoImage(file="images/espace.png")
 canvas.create_image(290, 280, image=photo)
 
 #Image pour le premier choix de vaisseau
-vaisseau1=PhotoImage(file="vaisseau_ship1.png")
+vaisseau1=PhotoImage(file="images/vaisseau_ship1.png")
 canvas.create_image(205, 280, image=vaisseau1)
 vaisseau1.configure(width=270, height=200)
 
 #Image pour le deuxième choix de vaisseau
-vaisseau2=PhotoImage(file="vaisseau_ship2.png")
+vaisseau2=PhotoImage(file="images/vaisseau_ship2.png")
 canvas.create_image(435, 280, image=vaisseau2)
 vaisseau2.configure(width=270, height=200)
 
 #Image pour le troisième choix de vaisseau
-vaisseau3=PhotoImage(file="vaisseau_ship3.png")
+vaisseau3=PhotoImage(file="images/vaisseau_ship3.png")
 canvas.create_image(750, 290, image=vaisseau3)
 vaisseau3.configure(width=370, height=200)
 

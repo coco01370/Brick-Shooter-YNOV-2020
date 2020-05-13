@@ -14,7 +14,7 @@ win.bgcolor("#211F1F")
 
 #Register the graphics for the game
 #turtle.register_shape("turtle")
-turtle.register_shape("player.gif")
+turtle.register_shape("images/player.gif")
 
 #Draw border
 border_pen = turtle.Turtle()
@@ -45,7 +45,7 @@ score_pen.hideturtle()
 #Create the player turtle
 player = turtle.Turtle()
 player.color("blue")
-player.shape("player.gif")
+player.shape("images/player.gif")
 player.speed(0)
 player.penup()
 player.setposition(0, -250)
