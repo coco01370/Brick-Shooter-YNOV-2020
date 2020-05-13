@@ -2,6 +2,7 @@ import turtle
 import os
 import math
 import random
+import subprocess
 
 #Set up the screen
 
@@ -223,3 +224,13 @@ while gameover == False:
   if bullet.ycor() > 275:
     bullet.hideturtle()
     bulletstate = "ready"
+
+  if (gameover == True):
+    gameover_pen = turtle.Turtle()
+    gameover_pen.hideturtle()
+    gameover_pen.goto(5, 2)
+    gameover_pen.color("white")
+    gameover_pen.write("GAME OVER ! \n", font=("Arial",25,"normal"), align="center")
+    gameover_pen.write("Cliquez pour continuer", font=("Arial",11,"normal"), align="center")
+    win.exitonclick()
+    subprocess.run('python accueil.py')
