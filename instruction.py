@@ -34,6 +34,7 @@ texte3 = canvas.create_text(266, 285, text="Si vous casser un carré, aucun bonu
 texte4 = canvas.create_text(224, 310, text="Si vous casser une tortue, la vitesse de tir sera diminue.", font="Arial 11 italic", fill="white")
 texte5 = canvas.create_text(283, 335, text="Si vous casser un rond, la vitesse de déplacement du joueur sera diminue.", font="Arial 11 italic", fill="white")
 texte5 = canvas.create_text(309, 360, text="Si vous casser un triangle, la vitesse de déplacement de l'ennemi sera augmentée.", font="Arial 11 italic", fill="white")
+texte6 = canvas.create_text(366, 400, text="Une fois la partie terminée, liquez sur le game over lorsque le message appraît pour revenir a l'accueil.", font="Arial 11 italic", fill="white")
 
 #Fonction pour les boutons
 bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
