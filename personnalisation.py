@@ -2,6 +2,7 @@
 from tkinter import *
 from random import randint
 import subprocess
+from gestion_des_donnees_du_joueur import *
 
 randumCredit = randint(0, 10)
 
@@ -47,13 +48,13 @@ vaisseau3.configure(width=370, height=200)
 choix_ship = 0
 
 def ship1():
-    choix_ship = 1
+    change_ship(1)
 
 def ship2():
-    choix_ship = 2
+    change_ship(2)
 
 def ship3():
-    choix_ship = 3
+    change_ship(3)
 
 def menus():
     fenetre.destroy()
