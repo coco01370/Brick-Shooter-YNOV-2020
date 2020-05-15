@@ -41,6 +41,8 @@ bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
 bouton_retour.configure(width=20, heigh=2, bg="#000033", fg="white")
 
+bouton_retour.place(x=330, y=575)
+
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)
 

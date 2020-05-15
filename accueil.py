@@ -67,6 +67,12 @@ bouton_jouer.configure(width=20, height=2, bg="#000033", fg="white")
 bouton_personnaliser.configure(width=20, height=2, bg="#000033", fg="white")
 bouton_instruction.configure(width=20, height=2, bg="#000033", fg="white")
 bouton_quitter.configure(width=20, heigh=2, bg="#000033", fg="white")
+
+bouton_jouer.place(x=330, y=150)
+bouton_personnaliser.place(x=330, y=250)
+bouton_instruction.place(x=330, y=350)
+bouton_quitter.place(x=330, y= 450)
+
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)
 

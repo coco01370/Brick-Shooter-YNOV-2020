@@ -69,10 +69,6 @@ bouton_ship2 = Button(fenetre, text="Ship2", command=ship2)
 bouton_ship2.pack(side="left", padx=5, pady=5)
 bouton_ship2.configure(width=20, height=2, bg="#000033", fg="white")
 #
-bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
-bouton_quitter.pack(side="right", padx=5, pady=5)
-bouton_quitter.configure(width=20, heigh=2, bg="#000033", fg="white")
-#
 bouton_ship3 = Button(fenetre, text="ship3", command=ship3)
 bouton_ship3.pack(side="left", padx=5, pady=5)
 bouton_ship3.configure(width=20, heigh=2, bg="#000033", fg="white")
@@ -80,6 +76,11 @@ bouton_ship3.configure(width=20, heigh=2, bg="#000033", fg="white")
 bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
 bouton_retour.configure(width=20, heigh=2, bg="#000033", fg="white")
+
+bouton_retour.place(x=620, y=575)
+bouton_ship1.place(x=35, y=575)
+bouton_ship2.place(x=230, y=575)
+bouton_ship3.place(x=425, y=575)
 
 
 if choix_ship == 1 :
