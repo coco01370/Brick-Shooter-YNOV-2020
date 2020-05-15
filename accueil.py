@@ -3,7 +3,6 @@ from tkinter import *
 from random import randint
 import subprocess
 from gestion_des_donnees_du_joueur import *
-RandumCredit = randint(0, 10)
 
 # On crée une fenêtre, racine de notre interface
 fenetre = Tk()
