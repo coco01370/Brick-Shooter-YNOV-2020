@@ -39,3 +39,14 @@ def change_ship(number):
 #---------------------gestion crédit
 def change_credit(new_credit):
         write_file(read_file(0), new_credit, read_file(2), read_file(3), read_file(4))
+
+
+#---------------------gestion vitesse_de_tire
+def change_tirSpeed(new_speed):
+    write_file(read_file(0), read_file(1), new_speed, read_file(3), read_file(4))
+#---------------------gestion vitesse_de_déplacement
+def change_deplacementSpeed(new_speed):
+    write_file(read_file(0), read_file(1),read_file(2), new_speed, read_file(4))
+#---------------------gestion vitesse_de_défilement
+def change_défilementSpeed(new_speed):
+    write_file(read_file(0), read_file(1),read_file(2), read_file(3), new_speed)
