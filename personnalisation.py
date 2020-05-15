@@ -13,12 +13,12 @@ fenetre = Tk()
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
 # interface racine
-champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#0F056b", fg="white")
+champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#000033", fg="white")
 
 # On affiche le label dans la fenêtre
 champ_label.pack()
 
-fenetre.configure(background="#0F056b")
+fenetre.configure(background="#000033")
 
 #Apparition de l'image en fond
 canvas=Canvas(fenetre, width=800, heigh=600)
@@ -63,23 +63,23 @@ def menus():
 #Fonction pour les boutons
 bouton_ship1 = Button(fenetre, text="Ship1", command=ship1)
 bouton_ship1.pack(side="left", padx=5, pady=5)
-bouton_ship1.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_ship1.configure(width=20, heigh=2, bg="#000033", fg="white")
 #
 bouton_ship2 = Button(fenetre, text="Ship2", command=ship2)
 bouton_ship2.pack(side="left", padx=5, pady=5)
-bouton_ship2.configure(width=20, height=2, bg="#0F056b", fg="white")
+bouton_ship2.configure(width=20, height=2, bg="#000033", fg="white")
 #
 bouton_quitter = Button(fenetre, text="Quitter", command=fenetre.quit)
 bouton_quitter.pack(side="right", padx=5, pady=5)
-bouton_quitter.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_quitter.configure(width=20, heigh=2, bg="#000033", fg="white")
 #
 bouton_ship3 = Button(fenetre, text="ship3", command=ship3)
 bouton_ship3.pack(side="left", padx=5, pady=5)
-bouton_ship3.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_ship3.configure(width=20, heigh=2, bg="#000033", fg="white")
 #
 bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
-bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_retour.configure(width=20, heigh=2, bg="#000033", fg="white")
 
 
 if choix_ship == 1 :

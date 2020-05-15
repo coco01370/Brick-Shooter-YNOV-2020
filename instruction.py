@@ -13,12 +13,12 @@ def menus():
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
 # interface racine
-champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#0F056b", fg="white")
+champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#000033", fg="white")
 
 # On affiche le label dans la fenêtre
 champ_label.pack()
 
-fenetre.configure(background="#0F056b")
+fenetre.configure(background="#000033")
 
 #Apparition de l'image en fond
 canvas=Canvas(fenetre, width=800, heigh=600)
@@ -39,7 +39,7 @@ texte6 = canvas.create_text(366, 400, text="Une fois la partie terminée, liquez
 #Fonction pour les boutons
 bouton_retour = Button(fenetre, text="Retourner à l'accueil", command=menus)
 bouton_retour.pack(side="bottom", padx=5, pady=5)
-bouton_retour.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_retour.configure(width=20, heigh=2, bg="#000033", fg="white")
 
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)

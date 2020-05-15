@@ -25,12 +25,12 @@ fenetre = Tk()
 # On crée un label (ligne de texte) souhaitant la bienvenue
 # Note : le premier paramètre passé au constructeur de Label est notre
 # interface racine
-champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#0F056b", fg="white")
+champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#000033", fg="white")
 
 # On affiche le label dans la fenêtre
 champ_label.pack()
 
-fenetre.configure(bg="#0F056b")
+fenetre.configure(bg="#000033")
 
 #Apparition de l'image en fond
 canvas=Canvas(fenetre, width=800, heigh=600)
@@ -63,10 +63,10 @@ bouton_jouer = Button(fenetre, text="Jouer", command=launch) #lancer le file spa
 bouton_jouer.pack(side="left", padx=5, pady=5)
 bouton_personnaliser = Button(fenetre, text="Personnaliser", command=Personnaliser)
 bouton_personnaliser.pack(side="left", padx=5, pady=5)
-bouton_jouer.configure(width=20, height=2, bg="#0F056b", fg="white")
-bouton_personnaliser.configure(width=20, height=2, bg="#0F056b", fg="white")
-bouton_instruction.configure(width=20, height=2, bg="#0F056b", fg="white")
-bouton_quitter.configure(width=20, heigh=2, bg="#0F056b", fg="white")
+bouton_jouer.configure(width=20, height=2, bg="#000033", fg="white")
+bouton_personnaliser.configure(width=20, height=2, bg="#000033", fg="white")
+bouton_instruction.configure(width=20, height=2, bg="#000033", fg="white")
+bouton_quitter.configure(width=20, heigh=2, bg="#000033", fg="white")
 #On met l'écran de jeu en pleine écran
 #fenetre.attributes('-fullscreen', True)
 
