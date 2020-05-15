@@ -4,6 +4,15 @@ import math
 import random
 import subprocess
 
+vaisseau = 0
+
+if vaisseau == 1:
+      vaisseau = "vaisseau_ship1.png"
+elif vaisseau == 2:
+  vaisseau = "vaisseau_ship2.png"
+else:
+  vaisseau = "vaisseau_ship3.png"
+
 #Set up the screen
 
 win = turtle.Screen()
