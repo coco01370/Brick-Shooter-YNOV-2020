@@ -25,7 +25,7 @@ def read_file(ligne):
     variable = "";
     while(c[ligne][j] != "\n" and (c[ligne][j] > "9" or c[ligne][j] < "0")):
         j += 1
-    while(c[ligne][j] != "\n" and (c[ligne][j] < "9" or c[ligne][j] > "0")):
+    while(c[ligne][j] != "\n" and (c[ligne][j] < "9" or c[ligne][j] > "0") and c[ligne][j] != "."):
         variable += c[ligne][j]
         j += 1
     fic.close()
@@ -35,3 +35,7 @@ def read_file(ligne):
 #---------------------changement que de la première ligne
 def change_ship(number):
     write_file(number, read_file(1), read_file(2), read_file(3), read_file(4))
+
+#---------------------gestion crédit
+def change_credit(new_credit):
+        write_file(read_file(0), new_credit, read_file(2), read_file(3), read_file(4))

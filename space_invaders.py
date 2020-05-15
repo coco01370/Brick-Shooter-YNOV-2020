@@ -237,6 +237,8 @@ while gameover == False:
     bulletstate = "ready"
 
   if (gameover == True):
+    new_credit = read_file(1) + (score / 2)
+    change_credit(new_credit)
     gameover_pen = turtle.Turtle()
     gameover_pen.hideturtle()
     gameover_pen.goto(5, 2)
