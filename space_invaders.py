@@ -5,7 +5,7 @@ import random
 import subprocess
 from gestion_des_donnees_du_joueur import *
 
-vaisseau = int(read_file(0)) 
+vaisseau = int(read_file(0))
 print(vaisseau)
 if vaisseau == 1:
       vaisseau = "images/vaisseau_ship1.gif"
@@ -62,7 +62,7 @@ player.penup()
 player.setposition(0, -250)
 player.setheading(90)
 
-playerspeed = 15
+playerspeed = read_file(3)
 
 #Choose number of enemies
 number_of_enemies = 5
@@ -94,7 +94,7 @@ for enemy in enemiesList:
   y = random.randint(100, 200)
   enemy.setposition(x, y)
 
-enemyspeed = 2
+enemyspeed = read_file(4)
 
 #Create the player's bullet
 bullet = turtle.Turtle()
@@ -106,7 +106,7 @@ bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
 bullet.hideturtle()
 
-bulletspeed = 30
+bulletspeed = read_file(2)
 
 #Define bullet state
 #we have 2 states:

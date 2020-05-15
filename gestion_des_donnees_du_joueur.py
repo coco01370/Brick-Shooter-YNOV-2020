@@ -29,7 +29,7 @@ def read_file(ligne):
         variable += c[ligne][j]
         j += 1
     fic.close()
-    return variable
+    return int(variable)
 
 
 #---------------------changement que de la première ligne

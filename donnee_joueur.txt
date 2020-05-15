@@ -1,0 +1,5 @@
+vaisseau : 2
+credit : 100
+vitesse de tire : 100
+vitesse de deplacement : 20
+vitesse de defilement : 2
