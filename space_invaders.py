@@ -9,7 +9,7 @@ import subprocess
 win = turtle.Screen()
 win.bgcolor("black")
 win.title("Space Invaders")
-win.bgcolor("#211F1F")
+win.bgcolor("#0F056b")
 #win.bgpic("space_invaders_background.gif")
 
 #Register the graphics for the game
