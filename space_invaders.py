@@ -231,6 +231,7 @@ while gameover == False:
     gameover_pen.goto(5, 2)
     gameover_pen.color("white")
     gameover_pen.write("GAME OVER ! \n", font=("Arial",25,"normal"), align="center")
-    gameover_pen.write("Cliquez pour continuer", font=("Arial",11,"normal"), align="center")
+    gameover_pen.write("Cliquez pour continuer \n", font=("Arial",11,"normal"), align="center")
+    gameover_pen.write("Votre score : %s" %score, font=("Arial",11,"normal"), align="center")
     win.exitonclick()
     subprocess.run('python accueil.py')
