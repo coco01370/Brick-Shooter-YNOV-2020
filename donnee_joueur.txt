@@ -1,4 +1,4 @@
-vaisseau : 3
+vaisseau : 2
 credit : 100
 vitesse de tire : 30
 vitesse de deplacement : 40

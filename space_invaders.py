@@ -3,15 +3,16 @@ import os
 import math
 import random
 import subprocess
+from gestion_des_donnees_du_joueur import *
 
-vaisseau = 0
-
+vaisseau = int(read_file(0)) 
+print(vaisseau)
 if vaisseau == 1:
-      vaisseau = "vaisseau_ship1.png"
+      vaisseau = "images/vaisseau_ship1.gif"
 elif vaisseau == 2:
-  vaisseau = "vaisseau_ship2.png"
+  vaisseau = "images/vaisseau_ship2.gif"
 else:
-  vaisseau = "vaisseau_ship3.png"
+  vaisseau = "images/vaisseau_ship3.gif"
 
 #Set up the screen
 
@@ -23,7 +24,8 @@ win.bgcolor("#000033")
 
 #Register the graphics for the game
 #turtle.register_shape("turtle")
-turtle.register_shape("images/player.gif")
+print(vaisseau, type(vaisseau))
+turtle.register_shape(vaisseau)
 
 #Draw border
 border_pen = turtle.Turtle()
@@ -54,7 +56,7 @@ score_pen.hideturtle()
 #Create the player turtle
 player = turtle.Turtle()
 player.color("blue")
-player.shape("images/player.gif")
+player.shape(vaisseau)
 player.speed(0)
 player.penup()
 player.setposition(0, -250)
