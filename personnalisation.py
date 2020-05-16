@@ -35,15 +35,15 @@ texte3 = canvas.create_text(640, 320, text="Coût de crédit : 50", font="Arial 
 
 
 Vaisseau1 = PhotoImage(file="images/vaisseau_ship1.gif")
-canvas.create_image(205, 280, image=Vaisseau1)
+canvas.create_image(250, 280, image=Vaisseau1)
 Vaisseau1.configure(width=270, height=200)
 
 Vaisseau2 = PhotoImage(file="images/vaisseau_ship2.gif")
-canvas.create_image(470, 280, image=Vaisseau2)
+canvas.create_image(503, 280, image=Vaisseau2)
 Vaisseau2.configure(width=270, height=200)
 
 Vaisseau3 = PhotoImage(file="images/vaisseau_ship3.gif")
-canvas.create_image(700, 280, image=Vaisseau3)
+canvas.create_image(740, 280, image=Vaisseau3)
 Vaisseau3.configure(width=270, height=200)
 
 choix_ship = 1
