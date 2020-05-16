@@ -61,21 +61,28 @@ def menus():
     fenetre.destroy()
     subprocess.run("python accueil.py")
 
+def print_credit(texte):
+    texte = canvas.itemconfigure(texte, text="Crédit(s) : " + str(read_file(1)))
+
 def vitShot_increment():
     if(read_file(1) >= 50):
         change_credit(read_file(1) - 50)
         change_tirSpeed(read_file(2) + 10) #augmente la vitesse de tir de 10
+        print_credit(texte)
 
 def vitMove_increment():
     if(read_file(1) >= 50):
         change_credit(read_file(1) - 50)
         change_deplacementSpeed(read_file(3) + 2) #augmente la vitesse de déplacement de 2
+        print_credit(texte)
 
 
 def vitEnemie_decrement():
     if(read_file(1) >= 50 and read_file(4) > 1):
         change_credit(read_file(1) - 50)
         change_defilementSpeed(read_file(4) -1) #diminue la vitesse des enemis de 1
+        print("ttttttttt");
+        print_credit(texte)
 
 
 bouton_ship1 = Button(fenetre , text="Ship1", command=ship1)

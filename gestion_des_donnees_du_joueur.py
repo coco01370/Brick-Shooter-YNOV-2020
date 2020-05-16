@@ -48,5 +48,5 @@ def change_tirSpeed(new_speed):
 def change_deplacementSpeed(new_speed):
     write_file(read_file(0), read_file(1),read_file(2), new_speed, read_file(4))
 #---------------------gestion vitesse_de_défilement
-def change_défilementSpeed(new_speed):
+def change_defilementSpeed(new_speed):
     write_file(read_file(0), read_file(1),read_file(2), read_file(3), new_speed)
