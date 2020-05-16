@@ -59,17 +59,17 @@ texteHide.pack_forget()
 #       |   |  \/  |    \     __
 #       |   |      |     \____/
 #Image pour le premier choix de vaisseau
-vaisseau1=PhotoImage(file="images/vaisseau_ship1.gif")
+vaisseau1=PhotoImage(file="images/vaisseau_ship1.png")
 canvas.create_image(205, 280, image=vaisseau1)
 vaisseau1.configure(width=270, height=200)
 
 #Image pour le deuxième choix de vaisseau
-vaisseau2=PhotoImage(file="images/vaisseau_ship2.gif")
+vaisseau2=PhotoImage(file="images/vaisseau_ship2.png")
 canvas.create_image(460, 280, image=vaisseau2)
 vaisseau2.configure(width=270, height=200)
 
 #Image pour le troisième choix de vaisseau
-vaisseau3=PhotoImage(file="images/vaisseau_ship3.gif")
+vaisseau3=PhotoImage(file="images/vaisseau_ship3.png")
 canvas.create_image(750, 290, image=vaisseau3)
 vaisseau3.configure(width=370, height=200)
 
