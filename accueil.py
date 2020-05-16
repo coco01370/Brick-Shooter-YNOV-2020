@@ -16,6 +16,7 @@ champ_label = Label(fenetre, text="Projet B1 Brick Shooter !", bg="#000033", fg=
 # On affiche le label dans la fenêtre
 champ_label.pack()
 
+#On donne une couleur de fond au contour de l'image de notre fenêtre
 fenetre.configure(bg="#000033")
 
 #On donne les dimensions de notre fenêtre de jeu 
