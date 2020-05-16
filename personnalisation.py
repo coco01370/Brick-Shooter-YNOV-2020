@@ -28,7 +28,7 @@ canvas.pack()
 photo=PhotoImage(file="images/espace.png")
 canvas.create_image(290, 280, image=photo)
 
-texte = canvas.create_text(750, 20, text="Crédit(s) : " + str(credit), font="Arial 11 italic", fill="#FFD700")
+texte = canvas.create_text(740, 20, text="Crédit(s) : " + str(credit), font="Arial 11 italic", fill="#FFD700")
 texte1 = canvas.create_text(150, 320, text="Coût de crédit : 50", font="Arial 11 italic", fill="#FFD700")
 texte2 = canvas.create_text(400, 320, text="Coût de crédit : 50", font="Arial 11 italic", fill="#FFD700")
 texte3 = canvas.create_text(640, 320, text="Coût de crédit : 50", font="Arial 11 italic", fill="#FFD700")

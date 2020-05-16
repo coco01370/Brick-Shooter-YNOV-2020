@@ -25,7 +25,7 @@ photo=PhotoImage(file="images/espace.png")
 canvas.create_image(290, 280, image=photo)
 
 #On affiche les crédits
-texte = canvas.create_text(750, 20, text="Crédit(s) :" + str(read_file(1)), font="Arial 11 italic", fill="#FFD700")
+texte = canvas.create_text(740, 20, text="Crédit(s) :" + str(read_file(1)), font="Arial 11 italic", fill="#FFD700")
 
 def launch():
     fenetre.destroy()
