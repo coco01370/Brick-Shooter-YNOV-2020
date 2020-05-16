@@ -2,18 +2,30 @@ import turtle
 import os
 import math
 import random
+import subprocess
+from gestion_des_donnees_du_joueur import *
+
+vaisseau = int(read_file(0))
+print(vaisseau)
+if vaisseau == 1:
+      vaisseau = "images/vaisseau_ship1.gif"
+elif vaisseau == 2:
+  vaisseau = "images/vaisseau_ship2.gif"
+else:
+  vaisseau = "images/vaisseau_ship3.gif"
 
 #Set up the screen
 
 win = turtle.Screen()
 win.bgcolor("black")
 win.title("Space Invaders")
-win.bgcolor("#211F1F")
+win.bgcolor("#000033")
 #win.bgpic("space_invaders_background.gif")
 
 #Register the graphics for the game
 #turtle.register_shape("turtle")
-turtle.register_shape("player.gif")
+print(vaisseau, type(vaisseau))
+turtle.register_shape(vaisseau)
 
 #Draw border
 border_pen = turtle.Turtle()
@@ -44,13 +56,13 @@ score_pen.hideturtle()
 #Create the player turtle
 player = turtle.Turtle()
 player.color("blue")
-player.shape("player.gif")
+player.shape(vaisseau)
 player.speed(0)
 player.penup()
 player.setposition(0, -250)
 player.setheading(90)
 
-playerspeed = 15
+playerspeed = read_file(3)
 
 #Choose number of enemies
 number_of_enemies = 5
@@ -82,7 +94,7 @@ for enemy in enemiesList:
   y = random.randint(100, 200)
   enemy.setposition(x, y)
 
-enemyspeed = 2
+enemyspeed = read_file(4)
 
 #Create the player's bullet
 bullet = turtle.Turtle()
@@ -94,7 +106,7 @@ bullet.setheading(90)
 bullet.shapesize(0.5, 0.5)
 bullet.hideturtle()
 
-bulletspeed = 30
+bulletspeed = read_file(2)
 
 #Define bullet state
 #we have 2 states:
@@ -223,3 +235,16 @@ while gameover == False:
   if bullet.ycor() > 275:
     bullet.hideturtle()
     bulletstate = "ready"
+
+  if (gameover == True):
+    new_credit = read_file(1) + (score / 2)
+    change_credit(new_credit)
+    gameover_pen = turtle.Turtle()
+    gameover_pen.hideturtle()
+    gameover_pen.goto(5, 2)
+    gameover_pen.color("white")
+    gameover_pen.write("GAME OVER ! \n", font=("Arial",25,"normal"), align="center")
+    gameover_pen.write("Cliquez pour continuer \n", font=("Arial",11,"normal"), align="center")
+    gameover_pen.write("Votre score : %s" %score, font=("Arial",11,"normal"), align="center")
+    win.exitonclick()
+    subprocess.run('python accueil.py')
